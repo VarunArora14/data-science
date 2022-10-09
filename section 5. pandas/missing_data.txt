@@ -1,0 +1,20 @@
+Real world data misses data for many reasons and many machine learning models just cannotrun without missing data therefore we have to 
+do changes to the data to make it usable for the model.
+When reading values, they are displayed as NaN values and new values like pd.NaT meaning it should be a timestamp but it is not.
+
+We have to make choices for missing data - 
+1. Drop the rows with missing data
+2. Fill the missing data with a value
+3. Keep it as it is
+
+If you keep the missing data, the data set remains the same but some methods wont run NaN values
+Another way is to put a reasonable guess for the missing data, like the mean of the column or the median of the column
+
+Another way is to drop data for missing data. Cons are that you lose data and you might lose important data.
+It may limit trained data and it may limit the accuracy of the model.
+
+It is better to check how big the data being dropped is, it's impact and if it is worth it to drop it.
+Dropping a column is a good choice if most rows or every row has it missing
+
+Filling the missing data - Potentially help for data points that are missing but are important
+Cons - Hardest to do and may lead to false conclusions
